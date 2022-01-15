@@ -1,0 +1,145 @@
+INFO:root:model arch : 
+ Model(
+  (feature): Sequential(
+    (0): Conv2d(1, 64, kernel_size=(5, 5), stride=(2, 2))
+    (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+    (3): Conv2d(64, 128, kernel_size=(3, 3), stride=(2, 2))
+    (4): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (5): ReLU()
+    (6): Conv2d(128, 256, kernel_size=(3, 3), stride=(2, 2))
+    (7): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (8): ReLU()
+    (9): AdaptiveAvgPool2d(output_size=1)
+    (10): Flatten(start_dim=1, end_dim=-1)
+    (11): Dropout(p=0.5, inplace=False)
+    (12): Linear(in_features=256, out_features=15, bias=True)
+  )
+)
+INFO:root:epoch: 0, train_avg_loss: 0.0392, train_avg_predict: 0.2131
+INFO:root:epoch: 1, train_avg_loss: 0.0332, train_avg_predict: 0.4121
+INFO:root:epoch: 2, train_avg_loss: 0.0286, train_avg_predict: 0.5285
+INFO:root:epoch: 3, train_avg_loss: 0.0253, train_avg_predict: 0.6078
+INFO:root:epoch: 4, train_avg_loss: 0.0225, train_avg_predict: 0.6804
+INFO:root:epoch: 5, train_avg_loss: 0.0201, train_avg_predict: 0.7233
+INFO:root:epoch: 6, train_avg_loss: 0.0180, train_avg_predict: 0.7769
+INFO:root:epoch: 7, train_avg_loss: 0.0161, train_avg_predict: 0.8051
+INFO:root:epoch: 8, train_avg_loss: 0.0144, train_avg_predict: 0.8335
+INFO:root:epoch: 9, train_avg_loss: 0.0129, train_avg_predict: 0.8566
+INFO:root:epoch: 10, train_avg_loss: 0.0116, train_avg_predict: 0.8696
+INFO:root:= == == == == == == == == == = TEST MODEL = == == == == == == == == == =
+INFO:root:test_avg_loss: 0.0106, test_avg_predict: 0.9142
+INFO:root:= == == == == == == == == == = TEST MODEL = == == == == == == == == == =
+INFO:root:epoch: 11, train_avg_loss: 0.0106, train_avg_predict: 0.8782
+INFO:root:epoch: 12, train_avg_loss: 0.0097, train_avg_predict: 0.8943
+INFO:root:epoch: 13, train_avg_loss: 0.0089, train_avg_predict: 0.9006
+INFO:root:epoch: 14, train_avg_loss: 0.0081, train_avg_predict: 0.9116
+INFO:root:epoch: 15, train_avg_loss: 0.0073, train_avg_predict: 0.9199
+INFO:root:epoch: 16, train_avg_loss: 0.0069, train_avg_predict: 0.9221
+INFO:root:epoch: 17, train_avg_loss: 0.0064, train_avg_predict: 0.9290
+INFO:root:epoch: 18, train_avg_loss: 0.0059, train_avg_predict: 0.9336
+INFO:root:epoch: 19, train_avg_loss: 0.0056, train_avg_predict: 0.9382
+INFO:root:epoch: 20, train_avg_loss: 0.0052, train_avg_predict: 0.9416
+INFO:root:= == == == == == == == == == = TEST MODEL = == == == == == == == == == =
+INFO:root:test_avg_loss: 0.0050, test_avg_predict: 0.9424
+INFO:root:= == == == == == == == == == = TEST MODEL = == == == == == == == == == =
+INFO:root:epoch: 21, train_avg_loss: 0.0048, train_avg_predict: 0.9438
+INFO:root:epoch: 22, train_avg_loss: 0.0046, train_avg_predict: 0.9496
+INFO:root:epoch: 23, train_avg_loss: 0.0042, train_avg_predict: 0.9533
+INFO:root:epoch: 24, train_avg_loss: 0.0040, train_avg_predict: 0.9561
+INFO:root:epoch: 25, train_avg_loss: 0.0038, train_avg_predict: 0.9581
+INFO:root:epoch: 26, train_avg_loss: 0.0036, train_avg_predict: 0.9567
+INFO:root:epoch: 27, train_avg_loss: 0.0034, train_avg_predict: 0.9620
+INFO:root:epoch: 28, train_avg_loss: 0.0032, train_avg_predict: 0.9634
+INFO:root:epoch: 29, train_avg_loss: 0.0030, train_avg_predict: 0.9668
+INFO:root:epoch: 30, train_avg_loss: 0.0030, train_avg_predict: 0.9650
+INFO:root:= == == == == == == == == == = TEST MODEL = == == == == == == == == == =
+INFO:root:test_avg_loss: 0.0029, test_avg_predict: 0.9616
+INFO:root:= == == == == == == == == == = TEST MODEL = == == == == == == == == == =
+INFO:root:epoch: 31, train_avg_loss: 0.0028, train_avg_predict: 0.9674
+INFO:root:epoch: 32, train_avg_loss: 0.0027, train_avg_predict: 0.9667
+INFO:root:epoch: 33, train_avg_loss: 0.0025, train_avg_predict: 0.9723
+INFO:root:epoch: 34, train_avg_loss: 0.0024, train_avg_predict: 0.9718
+INFO:root:epoch: 35, train_avg_loss: 0.0024, train_avg_predict: 0.9719
+INFO:root:epoch: 36, train_avg_loss: 0.0022, train_avg_predict: 0.9728
+INFO:root:epoch: 37, train_avg_loss: 0.0022, train_avg_predict: 0.9755
+INFO:root:epoch: 38, train_avg_loss: 0.0020, train_avg_predict: 0.9781
+INFO:root:epoch: 39, train_avg_loss: 0.0019, train_avg_predict: 0.9746
+INFO:root:epoch: 40, train_avg_loss: 0.0018, train_avg_predict: 0.9783
+INFO:root:= == == == == == == == == == = TEST MODEL = == == == == == == == == == =
+INFO:root:test_avg_loss: 0.0024, test_avg_predict: 0.9583
+INFO:root:= == == == == == == == == == = TEST MODEL = == == == == == == == == == =
+INFO:root:epoch: 41, train_avg_loss: 0.0018, train_avg_predict: 0.9760
+INFO:root:epoch: 42, train_avg_loss: 0.0018, train_avg_predict: 0.9765
+INFO:root:epoch: 43, train_avg_loss: 0.0016, train_avg_predict: 0.9787
+INFO:root:epoch: 44, train_avg_loss: 0.0016, train_avg_predict: 0.9801
+INFO:root:epoch: 45, train_avg_loss: 0.0015, train_avg_predict: 0.9793
+INFO:root:epoch: 46, train_avg_loss: 0.0015, train_avg_predict: 0.9799
+INFO:root:epoch: 47, train_avg_loss: 0.0014, train_avg_predict: 0.9814
+INFO:root:epoch: 48, train_avg_loss: 0.0013, train_avg_predict: 0.9829
+INFO:root:epoch: 49, train_avg_loss: 0.0013, train_avg_predict: 0.9833
+INFO:root:epoch: 50, train_avg_loss: 0.0012, train_avg_predict: 0.9839
+INFO:root:= == == == == == == == == == = TEST MODEL = == == == == == == == == == =
+INFO:root:test_avg_loss: 0.0017, test_avg_predict: 0.9678
+INFO:root:= == == == == == == == == == = TEST MODEL = == == == == == == == == == =
+INFO:root:epoch: 51, train_avg_loss: 0.0012, train_avg_predict: 0.9845
+INFO:root:epoch: 52, train_avg_loss: 0.0012, train_avg_predict: 0.9834
+INFO:root:epoch: 53, train_avg_loss: 0.0011, train_avg_predict: 0.9850
+INFO:root:epoch: 54, train_avg_loss: 0.0011, train_avg_predict: 0.9857
+INFO:root:epoch: 55, train_avg_loss: 0.0011, train_avg_predict: 0.9841
+INFO:root:epoch: 56, train_avg_loss: 0.0011, train_avg_predict: 0.9843
+INFO:root:epoch: 57, train_avg_loss: 0.0011, train_avg_predict: 0.9842
+INFO:root:epoch: 58, train_avg_loss: 0.0010, train_avg_predict: 0.9851
+INFO:root:epoch: 59, train_avg_loss: 0.0009, train_avg_predict: 0.9875
+INFO:root:epoch: 60, train_avg_loss: 0.0009, train_avg_predict: 0.9868
+INFO:root:= == == == == == == == == == = TEST MODEL = == == == == == == == == == =
+INFO:root:test_avg_loss: 0.0015, test_avg_predict: 0.9660
+INFO:root:= == == == == == == == == == = TEST MODEL = == == == == == == == == == =
+INFO:root:epoch: 61, train_avg_loss: 0.0010, train_avg_predict: 0.9855
+INFO:root:epoch: 62, train_avg_loss: 0.0009, train_avg_predict: 0.9865
+INFO:root:epoch: 63, train_avg_loss: 0.0009, train_avg_predict: 0.9871
+INFO:root:epoch: 64, train_avg_loss: 0.0009, train_avg_predict: 0.9864
+INFO:root:epoch: 65, train_avg_loss: 0.0008, train_avg_predict: 0.9893
+INFO:root:epoch: 66, train_avg_loss: 0.0009, train_avg_predict: 0.9872
+INFO:root:epoch: 67, train_avg_loss: 0.0008, train_avg_predict: 0.9881
+INFO:root:epoch: 68, train_avg_loss: 0.0008, train_avg_predict: 0.9865
+INFO:root:epoch: 69, train_avg_loss: 0.0008, train_avg_predict: 0.9876
+INFO:root:epoch: 70, train_avg_loss: 0.0007, train_avg_predict: 0.9900
+INFO:root:= == == == == == == == == == = TEST MODEL = == == == == == == == == == =
+INFO:root:test_avg_loss: 0.0014, test_avg_predict: 0.9688
+INFO:root:= == == == == == == == == == = TEST MODEL = == == == == == == == == == =
+INFO:root:epoch: 71, train_avg_loss: 0.0007, train_avg_predict: 0.9899
+INFO:root:epoch: 72, train_avg_loss: 0.0007, train_avg_predict: 0.9885
+INFO:root:epoch: 73, train_avg_loss: 0.0007, train_avg_predict: 0.9893
+INFO:root:epoch: 74, train_avg_loss: 0.0007, train_avg_predict: 0.9885
+INFO:root:epoch: 75, train_avg_loss: 0.0006, train_avg_predict: 0.9892
+INFO:root:epoch: 76, train_avg_loss: 0.0006, train_avg_predict: 0.9894
+INFO:root:epoch: 77, train_avg_loss: 0.0006, train_avg_predict: 0.9892
+INFO:root:epoch: 78, train_avg_loss: 0.0006, train_avg_predict: 0.9890
+INFO:root:epoch: 79, train_avg_loss: 0.0006, train_avg_predict: 0.9896
+INFO:root:epoch: 80, train_avg_loss: 0.0005, train_avg_predict: 0.9909
+INFO:root:= == == == == == == == == == = TEST MODEL = == == == == == == == == == =
+INFO:root:test_avg_loss: 0.0014, test_avg_predict: 0.9646
+INFO:root:= == == == == == == == == == = TEST MODEL = == == == == == == == == == =
+INFO:root:epoch: 81, train_avg_loss: 0.0006, train_avg_predict: 0.9912
+INFO:root:epoch: 82, train_avg_loss: 0.0006, train_avg_predict: 0.9891
+INFO:root:epoch: 83, train_avg_loss: 0.0006, train_avg_predict: 0.9900
+INFO:root:epoch: 84, train_avg_loss: 0.0005, train_avg_predict: 0.9898
+INFO:root:epoch: 85, train_avg_loss: 0.0007, train_avg_predict: 0.9880
+INFO:root:epoch: 86, train_avg_loss: 0.0008, train_avg_predict: 0.9851
+INFO:root:epoch: 87, train_avg_loss: 0.0005, train_avg_predict: 0.9905
+INFO:root:epoch: 88, train_avg_loss: 0.0005, train_avg_predict: 0.9896
+INFO:root:epoch: 89, train_avg_loss: 0.0005, train_avg_predict: 0.9907
+INFO:root:epoch: 90, train_avg_loss: 0.0004, train_avg_predict: 0.9916
+INFO:root:= == == == == == == == == == = TEST MODEL = == == == == == == == == == =
+INFO:root:test_avg_loss: 0.0012, test_avg_predict: 0.9662
+INFO:root:= == == == == == == == == == = TEST MODEL = == == == == == == == == == =
+INFO:root:epoch: 91, train_avg_loss: 0.0004, train_avg_predict: 0.9922
+INFO:root:epoch: 92, train_avg_loss: 0.0004, train_avg_predict: 0.9906
+INFO:root:epoch: 93, train_avg_loss: 0.0005, train_avg_predict: 0.9913
+INFO:root:epoch: 94, train_avg_loss: 0.0004, train_avg_predict: 0.9920
+INFO:root:epoch: 95, train_avg_loss: 0.0005, train_avg_predict: 0.9905
+INFO:root:epoch: 96, train_avg_loss: 0.0004, train_avg_predict: 0.9920
+INFO:root:epoch: 97, train_avg_loss: 0.0004, train_avg_predict: 0.9929
+INFO:root:epoch: 98, train_avg_loss: 0.0004, train_avg_predict: 0.9911
+INFO:root:epoch: 99, train_avg_loss: 0.0004, train_avg_predict: 0.9910
