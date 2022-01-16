@@ -80,6 +80,7 @@ def train(epochs, batch_size, lr, z_dim):
         generator.train()
         discriminator.train()
 
+
         d_loss = 0.0
         g_loss = 0.0
         gp = 0.0
