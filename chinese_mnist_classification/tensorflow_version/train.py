@@ -28,8 +28,6 @@ def train(epochs, batch_size, lr):
 
     dataset = Dataset(batch_size)
 
-    train_image_loader, test_image_loader = dataset.get_data_loader()
-
     model = Model()
     model.build(input_shape=(None, 64, 64, 1))
 
@@ -37,6 +35,8 @@ def train(epochs, batch_size, lr):
     cse = keras.losses.CategoricalCrossentropy(from_logits=True)
 
     for epoch in range(epochs):
+        train_image_loader, test_image_loader = dataset.get_data_loader()
+        
         train_avg_loss = 0.0
         train_avg_predict = 0.0
 

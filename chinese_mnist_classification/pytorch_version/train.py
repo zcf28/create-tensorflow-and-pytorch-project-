@@ -23,13 +23,12 @@ def train(epochs, batch_size, lr):
 
     logging.info(f"model arch : \n {model}")
 
-    train_loader = DataLoader(TrainDataset(), batch_size=batch_size, shuffle=True)
-    test_loader = DataLoader(TestDataset(), batch_size=batch_size)
-
     optimizer = torch.optim.Adam(model.parameters(), lr=lr)
     cse = torch.nn.CrossEntropyLoss()
 
     for epoch in range(epochs):
+        train_loader = DataLoader(TrainDataset(), batch_size=batch_size, shuffle=True)
+
         model.train()
         train_avg_loss = 0.0
         train_avg_predict = 0.0
@@ -62,6 +61,8 @@ def train(epochs, batch_size, lr):
             f"epoch: {epoch}, train_avg_loss: {train_avg_loss:0.4f}, train_avg_predict: {train_avg_predict:0.4f}")
 
         if epoch % 10 == 0 and epoch != 0:
+            test_loader = DataLoader(TestDataset(), batch_size=batch_size)
+            
             model.eval()
             test_avg_loss = 0.0
             test_avg_predict = 0.0

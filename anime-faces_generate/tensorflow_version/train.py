@@ -143,7 +143,7 @@ def train(epochs, batch_size, lr, z_dim):
             z = tf.random.uniform([batch_size, z_dim], minval=-1, maxval=1)
             fake_image = generator(z, False)
             save_image(f"./save_image/{epoch}", fake_image.numpy())
-            os.makedirs(f"./model/{epoch}", exist_ok=True)
+            os.makedirs(f"./save_model/{epoch}", exist_ok=True)
             generator.save_weights(f"./model/{epoch}/generator")
 
 
