@@ -144,7 +144,7 @@ def train(epochs, batch_size, lr, z_dim):
             fake_image = generator(z, False)
             save_image(f"./save_image/{epoch}", fake_image.numpy())
             os.makedirs(f"./save_model/{epoch}", exist_ok=True)
-            generator.save_weights(f"./model/{epoch}/generator")
+            generator.save_weights(f"./save_model/{epoch}/generator")
 
 
 if __name__ == '__main__':
