@@ -7,3 +7,6 @@
 ### dataset
 
  **chinses mnist**  下载链接  https://www.kaggle.com/gpreda/chinese-mnist
+
+**anime faces**  下载链接  https://www.kaggle.com/soumikrakshit/anime-faces
+
