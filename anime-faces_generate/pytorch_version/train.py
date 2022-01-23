@@ -7,16 +7,9 @@ from PIL import Image
 
 from model import Generator, Discriminator
 from dataset import TrainDataset
+from torchvision.utils import save_image
 
 from torch.utils.data import DataLoader
-
-
-def save_image(image_path, images):
-    os.makedirs(image_path, exist_ok=True)
-
-    for index in range(images.shape[0]):
-        im = Image.fromarray(np.uint8(np.transpose(images[index], (1, 2, 0))))
-        im.save(f"{image_path}/{index}.jpg")
 
 
 def gradient_penalty(discriminator, real_image, fake_image, device):
@@ -78,8 +71,7 @@ def train(epochs, batch_size, lr, z_dim):
 
     for epoch in range(epochs):
         generator.train()
-        discriminator.train()
-
+        discriminator.eval()
 
         d_loss = 0.0
         g_loss = 0.0
@@ -109,7 +101,7 @@ def train(epochs, batch_size, lr, z_dim):
             generator.eval()
             z = torch.randn(batch_size, z_dim).to(device)
             fake_image = generator(z)
-            save_image(f"./save_image/{epoch}", fake_image.detach().cpu().numpy())
+            save_image(fake_image.detach().cpu(), f"./save_image/{epoch}.jpg",)
             os.makedirs(f"./save_model/", exist_ok=True)
             torch.save(generator.state_dict(), f"./save_model/generator_{epoch}.pth")
 

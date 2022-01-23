@@ -17,7 +17,7 @@ def save_image(image_path, images):
     os.makedirs(image_path, exist_ok=True)
 
     for index in range(images.shape[0]):
-        im = Image.fromarray(np.uint8(images[index]))
+        im = Image.fromarray(np.uint8(images[index] * 255), mode="RGB")
         im.save(f"{image_path}/{index}.jpg")
 
 
